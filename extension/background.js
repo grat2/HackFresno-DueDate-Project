@@ -1,3 +1,8 @@
+chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.create({'url': chrome.extension.getURL('test.html')}, function(tab){
+  // Tab opened.
+    });
+});
 <script src="/extension/content.js" type="text/javascript"></script>
 // console.log(createevent[1]);
 // Refer to the JavaScript quickstart on how to setup the environment:
