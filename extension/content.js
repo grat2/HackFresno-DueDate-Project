@@ -3,7 +3,7 @@ var keywords = ["due", "completed by", "finished by", "before"];
 var datewords = ["tomorrow","this week", "next week"];
 var weekdates = ["mon","tues","wed","thurs","frid","satur","sund"];
 var paragraphs = [];
-var createvent = [];
+var createevent = [];
 var numpara = document.getElementsByTagName('p');
 
 //RUN THIS FUNCTION before reading paragraph content
@@ -36,7 +36,7 @@ function searchPcontent(){
     if(findKey(assigntypes.keys().value, tmp_rstring)){
       if(findKey(keywords.keys().value, tmp_rstring)){
         if(findKey(weekdates.keys().value, tmp_rstring) || findKey(datewords.keys().value, tmp_rstring)){
-          
+
         }
       }
     }
