@@ -1,0 +1,5 @@
+new idea: due date finder/reminder
+
+client key: 87063025225-854khnt96804fh8ilivs7g4qh7t04qjb.apps.googleusercontent.com
+
+client secret: A39yYTzTDW2snwENLslzgexn
