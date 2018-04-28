@@ -8,27 +8,32 @@
 
 //grabs every event in the createevent array and stores it in eData for conversion
 //to a google calendar event
+var popupTime = -1;
 var eData;
 for(eData in createevent) {
+    if(popupTime == -1) {
+        popupTime = 24;
+    }
     var event = {
         'summary': eData[0],
         'start': {
+            //event is set by default to start in the morning
             'dateTime': eData[1] + 'T09:00-07:00',
         },
         'end': {
             'dateTime': eData[1] + 'T09:30-07:00',
         },
         'recurrence': [
-            'RRULE:FREQ=DAILY;COUNT=2'
+            //none
         ],
         'attendees': [
-            {'email': 'lpage@example.com'},
-            {'email': 'sbrin@example.com'}
+            //none
         ],
         'reminders': {
             'useDefault': false,
             'overrides': [
-                {'method': 'popup', 'minutes': 24 * 60},
+                //reminders are set by default to 1 day before and 1 hour before
+                {'method': 'popup', 'minutes': popupTime * 60},
                 {'method': 'popup', 'minutes': 60}
             ]
         }
