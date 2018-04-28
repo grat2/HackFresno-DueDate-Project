@@ -1,6 +1,57 @@
 <html>
-  <head></head>
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      html{
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        background: white;
+        }
+      .btnstyle {
+        background-color: rgb(255,255,255,0) ;
+        border: none;
+        font-family: fantasy;
+        height: 80%;
+        width: 49.7%;
+        font-size: 300%;
+        
+        
+      }
+      .centerdiv{
+        position: relative;
+        top: 17%;
+        left: 25%;
+        width: 50%;
+        height: 25%;
+        
+        
+      }
+      .warning{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+        top: 50%;
+        font-size: 150%;
+        font-family: fantasy;
+        text-align: center;
+        opacity: .6;
+      }
+      .icon{
+        width: 20%;
+        height: 35%;
+        left: 39.5%;
+        top:8%;
+        position: absolute;
+      }
+    </style>
+  </head>
   <body>
+    <p class="warning">By signing in you agree to allow this program to make changes to your Google Calendar. Thank you for supporting and using our program!
+    </p>
+    <img src="neverlatephoto.jpg" class="icon">
     <script type="text/javascript">
       function handleClientLoad() {
         // Loads the client library and the auth2 library together for efficiency.
@@ -60,7 +111,9 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-    <button id="signin-button" onclick="handleSignInClick()">Sign In</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button>
+    <div class="centerdiv">
+      <button id="signin-button" class="btnstyle lftbtn" onclick="handleSignInClick()">Sign In</button>
+      <button id="signout-button" class="btnstyle" onclick="handleSignOutClick()">Sign Out</button>
+    </div>
   </body>
 </html>
