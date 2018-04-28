@@ -8,11 +8,11 @@
 var event = {
   'summary': createevent[1][0],
   'start': {
-    'dateTime': createevent[1][1],
+    'dateTime': createevent[1][1] + 'T09:00-07:00',
     'timeZone': 'America/Los_Angeles'
   },
   'end': {
-    'dateTime': '2015-05-28T17:00:00-07:00',
+    'dateTime': createevent[1][1] + 'T10:00-07:00',
     'timeZone': 'America/Los_Angeles'
   },
   'recurrence': [
