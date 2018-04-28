@@ -10,8 +10,14 @@
 //to a google calendar event
 var popupTime = -1;
 var eData;
+var input;
+
+if(/*settings change*/) {
+    popupTime = input;
+}
+
 for(eData in createevent) {
-    if(popupTime == -1) {
+    if(popupTime < 0) {
         popupTime = 24;
     }
     var event = {
