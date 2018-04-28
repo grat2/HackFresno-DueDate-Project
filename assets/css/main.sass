@@ -1,0 +1,233 @@
+@import '1-tools/-tools-index'
+@import '2-base/-base-index'
+@import '3-modules/-modules-index'
+@import '4-pages/-pages-index'
+
+html
+  height: 100%
+body
+  margin: 0
+  padding: 0
+  height: 9000px
+
+  .top-body
+    display: block
+    margin: 0
+    padding: 0
+    height: auto
+    width: 100vw
+    video
+      position: relative
+      left: 50%
+      height: auto
+      width: 100vw
+      transform: translate(-50%, 0%)
+      min-width: 100%
+      min-height: 100%
+      z-index: -100
+      /*background-repeat: no-repeat*/
+      /*background-position: bottom center*/
+      -webkit-background-size: cover
+      /*background-size: cover*/
+
+    .text-box
+      display: -webkit-flex
+      display: flex
+      -webkit-justify-content: center
+      justify-content: center
+      flex-direction: column
+      align-content: center
+      text-align: center
+      width: 100vw
+      position: absolute
+      top: 35%
+      -o-transform: translate(-50%, -50%)
+      -ms-transform: translate(-50%, -50%)
+      -moz-transform: translate(-50%, -50%)
+      -webkit-transform: translate(-50%, -50%)
+
+      #fname
+        margin: 0
+        text-align: center
+        font-family: -apple-system, BlinkMacSystemFont, Avenir
+        font-weight: bold
+        font-size: 6vmin
+        letter-spacing: 25px
+        color: white
+        text-shadow: 7px 7px 20px black
+
+      #title
+        margin: 0
+        padding-top: 5
+        opacity: 0.7
+        font-family: -apple-system, BlinkMacSystemFont, Avenir
+        font-weight: lighter
+        font-size: 2.5vmin
+        text-align: center
+        line-height: 40px
+        letter-spacing: 18px
+        color: white
+        text-shadow: 3px 3px 5px black
+
+      .menu
+        display: flex
+        position: relative
+        justify-content: center
+        align-content: center
+        text-align: center
+        width: 100vw
+        margin-top: 15px
+
+        .Land
+          position: relative
+          height: 35px
+          width: 110px
+
+          h1
+            margin: 0px
+            font-family: -apple-system, BlinkMacSystemFont, Avenir
+            font-weight: lighter
+            font-size: 1.8vmin
+            text-align: center
+            line-height: 20px
+            letter-spacing: 3px
+            text-shadow: 3px 3px 5px black
+
+            a
+              opacity: 0.5
+
+            #land
+              text-decoration: none
+              color: white
+
+            #land:hover
+              opacity: 1
+              transition: opacity 0.1s ease-in
+
+        .sepbar
+          position: relative
+          height: 18px
+          width:  1.5px
+          background-color: white
+          margin-left: 35px
+          margin-right: 20px
+
+        .Port
+          position: relative
+          height: 25px
+          width: 95px
+
+          h1
+            margin: 0px
+            font-family: -apple-system, BlinkMacSystemFont, Avenir
+            font-weight: lighter
+            font-size: 1.8vmin
+            text-align: center
+            line-height: 20px
+            letter-spacing: 3px
+            text-shadow: 3px 3px 5px black
+
+            a
+              opacity: 0.5
+
+            #port
+              text-decoration: none
+              color: white
+
+            #port:hover
+              opacity: 1
+              transition: opacity 0.1s ease-in
+
+    .footer-bx
+      position: absolute
+      //height: 10%
+      width: 100%
+      bottom: 8%
+      margin: 0
+      opacity: 0.5
+
+      #footer-box
+        height: 20px
+        width: 100vw
+        display: -webkit-flex
+        display: flex
+        -webkit-flex-wrap: wrap
+        flex-wrap: wrap
+        flex-direction: row-reverse
+        position: absolute
+
+        #disclaimer
+          z-index: 1
+          display: flex
+          flex-direction: column
+          //position: relative
+          //right: 42.5%
+          height: 20px
+          width: 100vw
+          flex-wrap: wrap
+          h1
+            //position: absolute
+            color: white
+            opacity: 0.7
+            margin: 0px
+            padding-top: 30px
+            text-align: center
+            font-family: -apple-system, BlinkMacSystemFont, Avenir
+            font-weight: lighter
+            font-size: 9px
+            letter-spacing: 2px
+
+        p
+          position: relative
+          margin: 0px
+          padding-top: 10px
+          padding-right: 25px
+          font-family: -apple-system, BlinkMacSystemFont, Avenir
+          font-weight: lighter
+          font-size: 9px
+          letter-spacing: 2px
+          color: white
+
+  .mid-body
+    display: block
+    margin: 0
+    padding: 0
+    position: absolute
+    height: 3000px
+    width: 100vw
+    background-color: grey
+
+    #main-content
+      position: absolute
+      width: 100%
+
+      #gallery
+        position: relative
+        margin: 100px
+
+        #thumbnails
+          position: relative
+
+        img
+          position: relative
+          right: 20%
+          bottom: 30%
+          max-width: 500px
+          max-height: 500px
+
+
+        .img-container
+          margin: 6px 10px
+          width:  380px
+          height: 380px
+          float: left
+          overflow: hidden
+
+  .bot-body
+
+@media only screen and (max-width: 550px)
+  .menu
+    visibility: hidden
+
+  .disclaimer
+    visibility: hidden
