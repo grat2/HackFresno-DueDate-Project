@@ -58,6 +58,20 @@
     <img src="neverlatephoto.png" class="icon">
     <a class="opts" href="options.html" target="_blank">Options</a>
     <script type="text/javascript">
+
+      var signinButton = document.getElementById('signin-button');
+      var signoutButton = document.getElementById('signout-button');
+
+      function handleClient() {
+        signinButton.onclick = authGet;
+      }
+
+      function authGet() {
+        chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
+          // Use the token.
+        });
+      }
+
       function handleClientLoad() {
         // Loads the client library and the auth2 library together for efficiency.
         // Loading the auth2 library is optional here since `gapi.client.init` function will load
@@ -72,13 +86,15 @@
             apiKey: 'AIzaSyBgQWhZ9QLiYz0RpHjUnidASqF_jLeJu84',
             discoveryDocs: ["https://people.googleapis.com/$discovery/rest?version=v1"],
             clientId: '87063025225-4j2fi91vfmlchvtlf94vn0r7b5k4djus.apps.googleusercontent.com',
-            scope: 'profile'
+            scope: 'https://www.googleapis.com/auth/calendar'
         }).then(function () {
           // Listen for sign-in state changes.
           gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
           // Handle the initial sign-in state.
           updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          signinButton.onclick = handleSignInClick;
+          signoutButton.onclick = handleSignOutClick;
         });
       }
 
@@ -86,7 +102,7 @@
         // When signin status changes, this function is called.
         // If the signin status is changed to signedIn, we make an API call.
         if (isSignedIn) {
-          makeApiCall();
+
         }
       }
 
@@ -100,25 +116,15 @@
         gapi.auth2.getAuthInstance().signOut();
       }
 
-      function makeApiCall() {
-        // Make an API call to the People API, and print the user's given name.
-        gapi.client.people.people.get({
-          'resourceName': 'people/me',
-          'requestMask.includeField': 'person.names'
-        }).then(function(response) {
-          console.log('Hello, ' + response.result.names[0].givenName);
-        }, function(reason) {
-          console.log('Error: ' + reason.result.error.message);
-        });
-      }
+
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
+      onload="this.onload=function(){};handleClient()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
     <div class="centerdiv">
-      <button id="signin-button" class="btnstyle lftbtn" onclick="handleSignInClick()">Sign In</button>
-      <button id="signout-button" class="btnstyle" onclick="handleSignOutClick()">Sign Out</button>
+      <button id="signin-button" class="btnstyle lftbtn">Sign In</button>
+      <button id="signout-button" class="btnstyle">Sign Out</button>
     </div>
   </body>
 </html>
