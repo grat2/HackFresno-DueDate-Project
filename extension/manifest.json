@@ -4,7 +4,8 @@
 	"version": "1.00",
 	"description": "Scans current web browser screen for due dates and saves event on Google Calendar.",
 	"browser_action": {
-		"default_icon": "NeverLateIcon.png"
+		"default_icon": "NeverLateIcon.png",
+		"test": "test.html"
 	},
 	"content_scripts": [
 	{
@@ -19,6 +20,7 @@
 	},
 	"permissions": [
 		"background",
-		"tabs"
+		"tabs",
+		"notifications"
 	]
 }
