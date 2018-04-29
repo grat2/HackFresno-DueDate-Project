@@ -36,10 +36,15 @@ body {
      * -ms-transform: translate(-50%, -50%)
      * -moz-transform: translate(-50%, -50%)
      * -webkit-transform: translate(-50%, -50%) */ }
-    body .content-wrap .content-elements #authorize-button {
-      display: none; }
-    body .content-wrap .content-elements #signout-button {
-      display: none; }
+    body .content-wrap .content-elements {
+      display: flex; }
+      body .content-wrap .content-elements h1 {
+        font-size: 10vmin;
+        font-family: courier; }
+      body .content-wrap .content-elements #authorize-button {
+        display: none; }
+      body .content-wrap .content-elements #signout-button {
+        display: none; }
     body .content-wrap .footer-bx {
       position: absolute;
       width: 100%;

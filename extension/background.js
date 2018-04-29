@@ -1,9 +1,10 @@
+<script src="/extension/content.js" type="text/javascript"></script>
+
 chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.create({'url': chrome.extension.getURL('test.html')}, function(tab){
+    chrome.tabs.create({'url': chrome.extension.getURL('/test.html')}, function(tab){
   // Tab opened.
     });
 });
-<script src="/extension/content.js" type="text/javascript"></script>
 // console.log(createevent[1]);
 // Refer to the JavaScript quickstart on how to setup the environment:
 // https://developers.google.com/calendar/quickstart/js
@@ -13,12 +14,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 //grabs every event in the createevent array and stores it in eData for conversion
 //to a google calendar event
-var popupTime = -1;
+/**var popupTime = -1;
 var eData;
 var input;
 
-if(/*settings change*/) {
-    popupTime = input;
+if(settings change) {
+/**    popupTime = input;
 }
 
 for(eData in createevent) {
@@ -58,4 +59,4 @@ for(eData in createevent) {
     request.execute(function(event) {
         appendPre('Event created: ' + event.htmlLink);
     });
-}
+}**/

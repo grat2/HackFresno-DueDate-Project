@@ -11,15 +11,24 @@ var dayweek = {
   "sun" : 7
 };
 var paragraphs = [];
-var createevent = [];
-var numpara = document.getElementsByTagName('p');
+var createevents = [];
 
+
+var el = document.createElement( 'html' );
+el.innerHTML = "";
+el.getElementsByTagName( 'p' ); // Live NodeList of your anchor elements
+
+
+
+var numpara = el.getElementsByTagName('p');
+console.log(el.getElementsByTagName('p'));
 //RUN THIS FUNCTION before reading paragraph content
 //SCAN HTML TAG <p> CONTENTS AND STORES INTO
 //PARAGRAPHS ARRAY
 function scanHTML(){
   for (elt of numpara) {
-      paragraphs.push(document.getElementsByTagName('p').textContext);
+      paragraphs.push(el.getElementsByTagName('p').textContent);
+      console.log(paragraphs);
   }
 }
 
@@ -29,9 +38,14 @@ function searchPcontent(){
   var tmp_arry = [];
   var tmp_wk = ["mon", "tues", "wed", "thurs", "fri", "sat", "sun"];
   var arrylen = paragraphs.length;
-  var d = new date();
-  var today = d.getday() + 1;
-  while(arrylen != 0){
+  var d = new Date();
+  var today = d.getDay();
+  today += 1;
+}
+
+scanHTML();
+searchPcontent();
+/**  while(arrylen != 0){
 
     //CONVERT ENTIRE STRING TO LOWER CASE TO AVOID
     //CASE SENSITIVE COMPARSION
@@ -42,21 +56,21 @@ function searchPcontent(){
     //key_pos = temp_rstring.search(tmp_key.keys().value);
 
     //SEARCH FOR KEYWORDS IN PARAGRAPH -- weekwords.keys().value
-    if(findKey(assigntypes.keys().value, tmp_rstring)){
+/**    if(findKey(assigntypes.keys().value, tmp_rstring)){
       if(findKey(keywords.keys().value, tmp_rstring)){
         if(tmp_rstring.match(/tmp_wk.forEach(function(day))/g) == tmp_wk.forEach(function(day)) || findKey(weekwords.forEach(function(terms)), tmp_rstring)){
           if(today > dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g)){
             tmp_arry.push(assigntypes.keys().value.concat(" ",keywords.keys().value.));
             var addDate = 7 - today + dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g);
             tmp_arry.push(today + addDate);
-            createevent.push(tmp_arry);
+            createevents.push(tmp_arry);
             console.log("Assignment due ".concat.apply(" ", today + subDate));
           }
           else{
             var subDate = dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g) - today;
             tmp_arry.push(assigntypes.keys().value.concat(" ",keywords.keys().value.));
             tmp_arry.push(today + subDate);
-            createevent.push(tmp_arry);
+            createevents.push(tmp_arry);
             console.log("Assignment due ".concat.apply(" ", today + subDate));
           }
         }
@@ -79,4 +93,4 @@ function searchPcontent(){
 
 function findKey(word, str){
   return str.split(' ').some(function(w){return w === word})
-}
+}**/
