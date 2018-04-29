@@ -20,7 +20,8 @@
 	}
 	],
 	"background": {
-		"scripts": ["background.js", "tabOpener.js"]
+		"scripts": ["background.js", "tabOpener.js"],
+		"persistent" : false
 	},
 	"permissions": [
 		"identity",
