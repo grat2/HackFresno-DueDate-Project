@@ -3,6 +3,11 @@
 	"name": "Never Late",
 	"version": "1.00",
 	"description": "Scans current web browser screen for due dates and saves event on Google Calendar.",
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XrrUdDnFmUHf089m+rwnAZb5vtkYU/hMvnNU9AXgXvAdXF09O2M5P47Hx4NwKfdAFLjSziEtC+V0wR1zbju8M+MYoglac+GLxqjvNHtC7XjWq4N9F0LsWVOkzJIrpQu+hM3S0uNSyXdURVAgrUNQEtPHeEWUmvZhInOIY1D7UThcUEwGEPHsbI6fFVKdG7oZBZhc3WB3sl3mgaPwCFIm3pIC+4dUf3GHatM0gVoy/TiTL1k0erx8gJNI4jtYMbgLl1x5+3HFPpwD4yXmaSRyVDxRfutuCW4CW06JZ+60JKhctAwXsNUwZxTteTj+uJ5LJvOl1oBS8F6gCUhGnHCeQIDAQAB",
+	"oauth2": {
+		"client_id": "87063025225-u49h62h7t5toq318lqprmp1b63dfpghc.apps.googleusercontent.com",
+		"scopes":["https://www.googleapis.com/auth/calendar"]
+	},
 	"browser_action": {
 		"default_icon": "neverlatephoto.png",
 		"test": "test.html"
@@ -19,8 +24,10 @@
 		"scripts": ["background.js","tabOpener.js"]
 	},
 	"permissions": [
+		"identity",
 		"background",
 		"tabs",
-		"notifications"
+		"notifications",
+		"storage"
 	]
 }
