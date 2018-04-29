@@ -42,7 +42,7 @@ for(eData in createevent) {
             ]
         }
     };
-
+    
     var request = gapi.client.calendar.events.insert({
         'calendarId': 'primary',
         'resource': event
