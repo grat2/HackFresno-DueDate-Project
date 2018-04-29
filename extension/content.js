@@ -1,5 +1,7 @@
 //<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-<script src="/assets/js/jquery.js" type="text/javascript"></script>
+//<script src="/assets/js/jquery.js" type="text/javascript"></script>
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 var assigntypes = ["paper","essay","assignment","project","homework","read"];
 var keywords = ["due", "completed by", "finished by", "before"];
@@ -20,12 +22,14 @@ function scanHTML(){
 
 //READ EACH PARAGRAPH CONTENT FOR KEYWORDS,
 //DUE DATES, AND TIME
-function searchPcontent(){
-  var datahtml = $(location).attr('href');
-  $('#div1').append($(datahtml));
-  alert($('#div1').find('p').text());
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  $(document).ready(function(){
+    $("p").each(function(i,v){
+      console.log(v);
+    });
+  });
 
-}
+</script>
   /**var arrylen = paragraphs.length;
   while(arrylen != 0){
     //CONVERT ENTIRE STRING TO LOWER CASE TO AVOID
