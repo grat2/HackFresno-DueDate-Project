@@ -4,6 +4,12 @@ function authGet() {
   });
 }
 
+chrome.cookies.get({url:'https://accounts.google.com', name:'LSID'}, function(cookie) {
+    if (cookie) {
+        console.log('Sign-in cookie:', cookie);
+    }
+});
+
 function handleClientLoad() {
   // Loads the client library and the auth2 library together for efficiency.
   // Loading the auth2 library is optional here since `gapi.client.init` function will load
