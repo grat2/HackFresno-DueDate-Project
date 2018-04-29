@@ -1,14 +1,13 @@
 function authGet() {
-  chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
+  chrome.identity.getAuthToken({'interactive': true}, function(token) {
     // Use the token.
+    if (chrome.runtime.lastError) {
+      alert(chrome.runtime.lastError.message);
+      return;
+    }
+    console.log(token);
   });
 }
-
-chrome.cookies.get({url:'https://accounts.google.com', name:'LSID'}, function(cookie) {
-    if (cookie) {
-        console.log('Sign-in cookie:', cookie);
-    }
-});
 
 function handleClientLoad() {
   // Loads the client library and the auth2 library together for efficiency.
