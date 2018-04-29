@@ -1,4 +1,6 @@
-<script src="" type="text/javascript"></script>
+//<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.js" type="text/javascript"></script>
+
 var assigntypes = ["paper","essay","assignment","project","homework","read"];
 var keywords = ["due", "completed by", "finished by", "before"];
 var datewords = ["tomorrow","this week", "next week"];
@@ -19,7 +21,12 @@ function scanHTML(){
 //READ EACH PARAGRAPH CONTENT FOR KEYWORDS,
 //DUE DATES, AND TIME
 function searchPcontent(){
-  var arrylen = paragraphs.length;
+  var datahtml = $(location).attr('href');
+  $('#div1').append($(datahtml));
+  alert($('#div1').find('p').text());
+
+}
+  /**var arrylen = paragraphs.length;
   while(arrylen != 0){
     //CONVERT ENTIRE STRING TO LOWER CASE TO AVOID
     //CASE SENSITIVE COMPARSION
@@ -53,4 +60,4 @@ function searchPcontent(){
 
 function findKey(word, str){
   return str.split(' ').some(function(w){return w === word})
-}
+}**/
