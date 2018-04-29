@@ -1,7 +1,4 @@
-let paragraphs = document.getElementsByTagName('p');
-var word = str.search("and");
-for (elt of paragraphs) { 
-    word.style['background-color'] = '#FF00FF';
+<script src="" type="text/javascript"></script>
 var assigntypes = ["paper","essay","assignment","project","homework","read"];
 var keywords = ["due", "completed by", "finished by", "before"];
 var datewords = ["tomorrow","this week", "next week"];
