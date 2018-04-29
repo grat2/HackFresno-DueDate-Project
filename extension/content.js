@@ -44,7 +44,6 @@ function searchPcontent(){
     //SEARCH FOR KEYWORDS IN PARAGRAPH -- weekwords.keys().value
     if(findKey(assigntypes.keys().value, tmp_rstring)){
       if(findKey(keywords.keys().value, tmp_rstring)){
-<<<<<<< HEAD
         if(tmp_rstring.match(/tmp_wk.forEach(function(day))/g) == tmp_wk.forEach(function(day)) || findKey(weekwords.forEach(function(terms)), tmp_rstring)){
           if(today > dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g)){
             tmp_arry.push(assigntypes.keys().value.concat(" ",keywords.keys().value.));
@@ -60,10 +59,6 @@ function searchPcontent(){
             createevent.push(tmp_arry);
             console.log("Assignment due ".concat(" ", today + subDate));
           }
-=======
-        if(findKey(weekdates.keys().value, tmp_rstring) || findKey(datewords.keys().value, tmp_rstring)){
-
->>>>>>> 986a5ca662d0000d608a75d6839de7b583528241
         }
       }
     }
