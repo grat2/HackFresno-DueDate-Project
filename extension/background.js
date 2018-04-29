@@ -1,8 +1,4 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.create({'url': chrome.extension.getURL('test.html')}, function(tab){
-  // Tab opened.
-    });
-});
+<script src="" type="text/javascript"></script>
 <script src="/extension/content.js" type="text/javascript"></script>
 // console.log(createevent[1]);
 // Refer to the JavaScript quickstart on how to setup the environment:
@@ -17,9 +13,7 @@ var popupTime = -1;
 var eData;
 var input;
 
-if(/*settings change*/) {
-    popupTime = input;
-}
+
 
 for(eData in createevent) {
     if(popupTime < 0) {
@@ -59,3 +53,4 @@ for(eData in createevent) {
         appendPre('Event created: ' + event.htmlLink);
     });
 }
+

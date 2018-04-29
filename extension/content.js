@@ -1,3 +1,7 @@
+let paragraphs = document.getElementsByTagName('p');
+var word = str.search("and");
+for (elt of paragraphs) { 
+    word.style['background-color'] = '#FF00FF';
 var assigntypes = ["paper","essay","assignment","project","homework","read"];
 var keywords = ["due", "completed by", "finished by", "before"];
 var datewords = ["tomorrow","this week", "next week"];
@@ -19,11 +23,7 @@ function scanHTML(){
 //DUE DATES, AND TIME
 function searchPcontent(){
   var arrylen = paragraphs.length;
-  for(arrylen != 0){
-
-    //DATE FROM
-    var tmp_date = ;
-
+  while(arrylen != 0){
     //CONVERT ENTIRE STRING TO LOWER CASE TO AVOID
     //CASE SENSITIVE COMPARSION
     var tmp_rstring = paragraphs[arrylen].toLowerCase();
