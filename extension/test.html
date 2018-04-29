@@ -1,6 +1,5 @@
 <html>
   <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
       html{
         height: 100%;
@@ -16,8 +15,6 @@
         height: 80%;
         width: 49.7%;
         font-size: 300%;
-        
-        
       }
       .centerdiv{
         position: relative;
@@ -25,8 +22,6 @@
         left: 25%;
         width: 50%;
         height: 25%;
-        
-        
       }
       .warning{
         position: absolute;
@@ -46,12 +41,20 @@
         top:8%;
         position: absolute;
       }
+      .opts{
+        position: absolute;
+        left: 48%;
+        top: 65%;
+        font-size: 120%;
+        color: red;
+      }
     </style>
   </head>
   <body>
     <p class="warning">By signing in you agree to allow this program to make changes to your Google Calendar. Thank you for supporting and using our program!
     </p>
     <img src="neverlatephoto.jpg" class="icon">
+    <a class="opts" href="options.html" target="_blank">Options</a>
     <script type="text/javascript">
       function handleClientLoad() {
         // Loads the client library and the auth2 library together for efficiency.
