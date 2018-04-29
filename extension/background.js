@@ -1,4 +1,3 @@
-<script src="" type="text/javascript"></script>
 <script src="/extension/content.js" type="text/javascript"></script>
 // console.log(createevent[1]);
 // Refer to the JavaScript quickstart on how to setup the environment:
