@@ -50,14 +50,14 @@ function searchPcontent(){
             var addDate = 7 - today + dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g);
             tmp_arry.push(today + addDate);
             createevent.push(tmp_arry);
-            console.log("Assignment due ".concat(" ", today + subDate));
+            console.log("Assignment due ".concat.apply(" ", today + subDate));
           }
           else{
             var subDate = dayweek.tmp_rstring.match(/tmp_wk.forEach(function(day))/g) - today;
             tmp_arry.push(assigntypes.keys().value.concat(" ",keywords.keys().value.));
             tmp_arry.push(today + subDate);
             createevent.push(tmp_arry);
-            console.log("Assignment due ".concat(" ", today + subDate));
+            console.log("Assignment due ".concat.apply(" ", today + subDate));
           }
         }
       }
