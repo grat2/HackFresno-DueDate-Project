@@ -8,17 +8,33 @@
         width: 100%;
         height: 100%;
     }
-    body {
-        background-color: rgb(230, 162, 162);
+    body{
+        background-color: white;
     }
-    .title{
-        position:absolute;
-        font-size: 250%;
-        font-family: fantasy;
-        width: 26%;
-        left: 38%;
-        top: 15%;
+    .centering{
+        position: relative;
+        left:0%;
     }
+    .main{
+        background-color: yellow;
+        width: 100%;
+        height: 100%;
+        
+    }
+    #browsebar{
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 15%;
+        background-color: rgb(243, 242, 242);
+        border-bottom-style: solid;
+        border-bottom-color: rgba(214, 214, 216, 0.479);
+        font-size: 200%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    
     #time{
         position: absolute;
         width: 13%;
@@ -29,18 +45,6 @@
         font-family: fantasy;
         border-color: black;
         background-color: rgb(230, 162, 162);
-    }
-    .borderdiv{
-        position: absolute;
-        background-color: red;
-        height: 30%;
-        width: 30%;
-        left: 34.5%;
-        top: 15%;
-        border: double;
-        border-width: 20px;
-        border-color: black;
-        color: red;
     }
     #save{
         position: absolute;
@@ -62,28 +66,42 @@
         font-size: 200%;
         left:44.5%;
         top: 25%;
-        color: white;
-    }   ​
+        color: red;
+    }  
+    .buttonstyle {
+        width: auto;
+        height: autio;
+        color: black;
+    } ​
     </style>
-</head>
-<body>
-<div class="borderdiv"><p>"     "</p></div>
+    </head>
+    
+    <body>
+    <div id="browsebar">
+        <table style="width:100%">
+            <tr>
+                <th><a class="centering" href="options.html">GENERAL</a></th>
+                <th>*LOGO* NEVERLATE</th>
+                <th><a class="centering" href="support.html">SUPPORT</a></th>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="main">
+    <p>GENERAL OPTIONS</p>
+    </div>
+    
+    <select id="time">
+        <option value="1day">One Day</option>
+        <option value="12hrs">Twelve Hours</option>
+        <option value="6hrs">Six Hours</option>
+        <option value="1hr">One Hour</option>
+        <option value="30min">Thirty Minutes</option>
+        <option value="1min">One Minute</option>
+    </select>
 
-<p class="title">When Should We Notify You?</p>
-<select id="time">
-    <option value="1day">One Day</option>
-    <option value="12hrs">Twelve Hours</option>
-    <option value="6hrs">Six Hours</option>
-    <option value="1hr">One Hour</option>
-    <option value="30min">Thirty Minutes</option>
-    <option value="1min">One Minute</option>
-</select>
-
-
-
-<div id="status"></div>
-<button id="save">Save</button>
-
-<script src="options.js"></script>
-</body>
+    <div id="status"></div>
+    <button id="save">Save</button>
+    <script src="options.js"></script>
+    </body>
 </html>

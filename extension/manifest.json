@@ -1,6 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Never Late",
+	"options_page": "options.html",
 	"version": "1.00",
 	"description": "Scrape current web browser screen for assignment due dates and saves them as events on Google Calendar to later alert you of any assignments you may have forgotten about.",
 	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1XrrUdDnFmUHf089m+rwnAZb5vtkYU/hMvnNU9AXgXvAdXF09O2M5P47Hx4NwKfdAFLjSziEtC+V0wR1zbju8M+MYoglac+GLxqjvNHtC7XjWq4N9F0LsWVOkzJIrpQu+hM3S0uNSyXdURVAgrUNQEtPHeEWUmvZhInOIY1D7UThcUEwGEPHsbI6fFVKdG7oZBZhc3WB3sl3mgaPwCFIm3pIC+4dUf3GHatM0gVoy/TiTL1k0erx8gJNI4jtYMbgLl1x5+3HFPpwD4yXmaSRyVDxRfutuCW4CW06JZ+60JKhctAwXsNUwZxTteTj+uJ5LJvOl1oBS8F6gCUhGnHCeQIDAQAB",
@@ -20,7 +21,7 @@
 	}
 	],
 	"background": {
-		"scripts": ["background.js", "tabOpener.js"],
+		"scripts": ["background.js"],
 		"persistent" : false
 	},
 	"permissions": [
